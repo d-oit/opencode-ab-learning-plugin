@@ -7,8 +7,14 @@
   "scripts": {
     "dev": "bun run src/ab-learning.ts",
     "test": "bun test",
+    "test:watch": "bun test --watch",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write src/**/*.ts examples/**/*.md *.md",
+    "format:check": "prettier --check src/**/*.ts examples/**/*.md *.md",
     "lint": "eslint src",
-    "format": "prettier --write src"
+    "lint:fix": "eslint src --fix",
+    "build": "tsc",
+    "clean": "rm -rf dist *.db"
   },
   "keywords": [
     "opencode",
@@ -21,7 +27,10 @@
     "genetic-algorithm",
     "machine-learning",
     "llm",
-    "optimization"
+    "optimization",
+    "bayesian",
+    "contextual-bandits",
+    "linucb"
   ],
   "author": "Dominik Oswald <d-oit>",
   "license": "MIT",
@@ -38,7 +47,6 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "eslint": "^9.0.0",
     "prettier": "^3.0.0"
   }
 }
